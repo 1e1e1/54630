@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1, header p {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 1s;
+}
+
+nav ul li a:hover {
+    background: #555;
+}
+
+.sidebar {
+    position: fixed;
+    top: 110px; /* 與導航欄高度一致 */
+    left: -460px; /* 初始時將側邊欄隱藏在畫面左側 */
+    width: 400px;
+    height: calc(100vh - 80px); /* 考慮到導航欄的高度 */
+    background: #f4f4f4;
+    padding: 30px;
+    transition: left 1s; /* 添加過渡效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}
+.show {
+    left: 0; /* 顯示側邊欄 */
+}
+.Hobby{
+    display: flex;
+    width: 100%;
+  }
+.Hobby-info{
+    color: #000;
+    background-color: #ffffff8f;
+    transition: background-color 1s, opacity 1s;
+    opacity: 1;
+    box-shadow: 0 0 15px #dadadae1;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: 0 20px 0;
+    border-radius: 50px;
+  }
+
+.recipe {
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-content {
+    margin-left: 0; /* 留出側邊欄的寬度 */
+    transition: margin-left 1s; /* 添加過渡效果 */
+}
+
+.expanded {
+    margin-left: 250px; /* 擴展主內容以避免被側邊欄遮擋 */
+}
+
+.section {
+    padding: 2rem;
+    border-bottom: 1px solid #ddd;
+    padding-top: 4rem; /* 添加額外的頂部填充來避免內容被導航欄遮擋 */
+    margin-top: -4rem; /* 負的頂部邊距來抵消填充效果 */
+    height: 100vh; /* 設置section高度為100vh */
+    background-color: rgb(162, 241, 241); /* 設置背景顏色 */
+}
+
+/* 彈窗的CSS */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.5); 
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#experienceChart {
+    max-width: 600px;
+    max-height: 600px;
+    margin: 0 auto;
+}
