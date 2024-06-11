@@ -59,18 +59,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sidebar.classList.toggle('show');
         mainContent.classList.toggle('expanded');
     });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const toggleButton = document.getElementById('toggleSidebar');
-    const sidebar = document.querySelector('.sidebar');
-    const mainContent = document.querySelector('.main-content');
-
-    toggleButton.addEventListener('click', function() {
-        sidebar.classList.toggle('show');
-        mainContent.classList.toggle('expanded');
-    });
-
     const ctx = document.getElementById('experienceChart').getContext('2d');
     const experienceChart = new Chart(ctx, {
         type: 'pie',
@@ -78,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
             labels: ['水電工學徒', '網路銷售'],
             datasets: [{
                 label: '工作經驗',
-                data: [52, 20,], 
+                data: [52, 20,], // 假設的數據
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
                     'rgba(54, 162, 235, 0.2)',
