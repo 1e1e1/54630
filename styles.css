@@ -10,7 +10,9 @@ body {
     width: 80%;
     margin: 0 auto;
     max-width: 1200px;
+    
 }
+
 
 header {
     background: #333;
@@ -66,8 +68,8 @@ nav ul li a:hover {
 .Hobby{
     display: flex;
     width: 100%;
-  }
-.Hobby-info{
+  }  
+.Hobby-info{  /*不知道叫什麼的格子的部分*/
     color: #000;
     background-color: #ffffff8f;
     transition: background-color 1s, opacity 1s;
@@ -155,4 +157,42 @@ footer {
     max-width: 600px;
     max-height: 600px;
     margin: 0 auto;
+}
+
+footer {
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.footer-img {
+    width: 300px;
+    height: 300px;
+}
+
+.benham-disk {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh; /* 可根據需要調整高度 */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    margin: 20px 0; /* 可調整圖片與其他元素之間的間距 */
 }

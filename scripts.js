@@ -1,13 +1,18 @@
+// 在这里定义图片的路径
+const imagePath = '148987.png';
+
 // 平滑滾動到錨點位置並考慮偏移量
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
 
-        const targetId = this.getAttribute('href').substring(1);
-        const targetElement = document.getElementById(targetId);
-        const headerOffset = document.querySelector('header').offsetHeight;
-        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
+        const toggleSidebarBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.main-content');
+        const speedControl = document.getElementById('speedControl');
+        const speedInput = document.getElementById('speedInput');
+        const benhamDisk = document.getElementById('benhamDisk');
+        
 
         window.scrollTo({
             top: offsetPosition,
@@ -83,3 +88,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const image = document.querySelector('.image-container img');
+    let rotationInterval; // 保存 setInterval 的引用
+
+    // 開始旋轉圖片
+    function startRotation() {
+        rotationInterval = setInterval(function () {
+            const rotation = (parseInt(image.style.transform.replace('rotate(', '').replace('deg)', '')) || 0) + 1;
+            image.style.transform = `rotate(${rotation}deg)`;
+        }, 0.5);
+    }
+
+    // 停止旋轉圖片
+    function stopRotation() {
+        clearInterval(rotationInterval);
+    }
+
+    // 當滑鼠移到圖片上時，開始旋轉
+    image.addEventListener('mouseenter', startRotation);
+
+    // 當滑鼠從圖片上移開時，停止旋轉
+    image.addEventListener('mouseleave', stopRotation);
+});
+
