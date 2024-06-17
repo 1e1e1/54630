@@ -5,14 +5,13 @@ const imagePath = '148987.png';
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-
-        const toggleSidebarBtn = document.getElementById('toggleSidebar');
-        const sidebar = document.querySelector('.sidebar');
-        const mainContent = document.querySelector('.main-content');
-        const speedControl = document.getElementById('speedControl');
-        const speedInput = document.getElementById('speedInput');
-        const benhamDisk = document.getElementById('benhamDisk');
         
+        // 获取目标元素的id
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        // 计算目标位置
+        const offsetPosition = targetElement.offsetTop - document.querySelector('header').offsetHeight;
 
         window.scrollTo({
             top: offsetPosition,
